@@ -20,3 +20,22 @@ var twoSum = function(nums, target) {
 };
 twoSum (nums, target);
 ```
+优化后：
+```js
+var nums = [2, 7, 11, 15];
+var target = 9;
+var twoSum = function(nums, target) {
+    var length = nums.length;
+    var num = [];
+    for(var i = 0; i < length-1;i++){
+        var result = target - nums[i]
+        for(var j = i+1; j< length; j++){
+            if(nums[j] === result){
+                num.push(i , j);
+            }
+        }
+    }
+    return num;
+};
+twoSum (nums, target);
+```
