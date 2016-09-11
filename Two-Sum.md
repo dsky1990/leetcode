@@ -28,8 +28,8 @@ const twoSum = function(nums, target) {
     const length = nums.length,
         num = [];
     for(let i = 0; i < length-1;i++){
-        let result = target - nums[i]
-        for(var j = i+1; j< length; j++){
+        let result = target - nums[i];
+        for(let j = i+1; j< length; j++){
             if(nums[j] === result){
                 num.push(i , j);
             }
